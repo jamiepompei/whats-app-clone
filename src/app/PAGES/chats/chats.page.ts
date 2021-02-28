@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-chats',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatsPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtl: NavController) { }
 
   ngOnInit() {
+  }
+  
+  selectChat(){
+    console.log("selected chat");
+    this.navCtl.navigateForward('messages');
   }
 
 }

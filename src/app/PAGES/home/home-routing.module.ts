@@ -20,6 +20,11 @@ const routes: Routes = [
       {
         path: 'calls',
         loadChildren: () => import('../calls/calls.module').then( m => m.CallsPageModule)
+      },
+      {
+        path: '',
+        redirectTo: 'home/chats',
+        pathMatch: 'full'
       }
     ]
   },
