@@ -1,12 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { StatusPageModule } from '../status/status.module';
 
 import { HomePage } from './home.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomePage
+    component: HomePage,
+    children: [
+      {
+        path: 'chats', 
+        loadChildren: () => import('../chats/chats.module').then(m => m.ChatsPageModule)
+      },
+      {
+        path: 'status',
+        loadChildren: () => import('../status/status.module').then(m => m.StatusPageModule)
+      }
+    ]
   }
 ];
 
