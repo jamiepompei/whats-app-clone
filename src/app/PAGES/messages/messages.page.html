@@ -1,27 +1,37 @@
 <ion-header>
   <ion-toolbar>
-    <div class="messages_title" slot="start">
+    <div class="message_title" slot="start">
       <ion-buttons class="message_back_button">
         <ion-back-button defaultHref="home"></ion-back-button>
       </ion-buttons>
       <div class="messages_profile_pic"><ion-avatar>
         <img src= "https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
       </ion-avatar></div>
-      <ion-title>Ionic group</ion-title>
+      <ion-title>{{ data.name }}</ion-title>
     </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="message_content">
-    <div class="message_chats">
-      hello there
-      <span class="message_time_stamp">Today</span>
-    </div>
-    <div class="message_chats message_reciever">
-      I am doing great!
-      <span class="message_time_stamp">Today</span>
+    <div *ngFor="let chat of data.messages">
+      <div class="message_chats">
+        {{ chat.message }}
+        <span class="message_time_stamp">Today</span>
+      </div>
     </div>
   </div>
   
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="chat_input">
+      <ion-icon class="chat_icons" name="happy-outline"></ion-icon>
+      <input type="text">
+      <div class="chat_icons">
+        <ion-icon name="send"></ion-icon>    
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

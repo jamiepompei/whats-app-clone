@@ -37,3 +37,19 @@
     background-color: #dcf8c6;
     float: right;
 }
+.chat_input{
+    display: flex;
+    .chat_icons{
+        font-size: 35px;
+        color: white;
+        margin-top: 4px;
+    }
+    input{
+        flex: 1;
+        background: white;
+        border-radius: 30px;
+        padding: 10px;
+        margin: 4px;
+        color: black;
+    }
+}
