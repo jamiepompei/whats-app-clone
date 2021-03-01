@@ -23,7 +23,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'home/chats',
+        redirectTo: '/home/chats',
         pathMatch: 'full'
       }
     ]

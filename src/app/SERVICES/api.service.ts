@@ -18,4 +18,7 @@ export class ApiService {
   postChats(chat: {}): Observable<any>{
     return this.http.post(this.serverUrl + '/chats', chat)
   }
+  postResource(route: string, item): Observable<any>{
+    return this.http.post(this.serverUrl + route, item);
+  }
 }

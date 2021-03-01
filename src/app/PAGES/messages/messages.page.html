@@ -28,9 +28,9 @@
   <ion-toolbar>
     <div class="chat_input">
       <ion-icon class="chat_icons" name="happy-outline"></ion-icon>
-      <input type="text">
+      <input type="text" name="chat" [(ngModel)]="chat">
       <div class="chat_icons">
-        <ion-icon name="send"></ion-icon>    
+        <ion-icon name="send" (click)="postMessage()"></ion-icon>    
       </div>
     </div>
   </ion-toolbar>
