@@ -39,10 +39,10 @@ export class MessagesPage implements OnInit {
   }
 
   postMessage(){
-    let user = JSON.parse(this.authService.getUser());
+    this.user = JSON.parse(this.authService.getUser());
     let obj ={
       message: this.chat,
-      from: user._id,
+      from: this.user._id,
       chat_id: this.data._id,
       time: Date.now()
     }
