@@ -2,7 +2,7 @@
   <ion-toolbar>
     <div class="message_title" slot="start">
       <ion-buttons class="message_back_button">
-        <ion-back-button defaultHref="home"></ion-back-button>
+        <ion-back-button defaultHref="home" (click)="unsubscribe()"></ion-back-button>
       </ion-buttons>
       <div class="messages_profile_pic"><ion-avatar>
         <img src= "https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
@@ -15,9 +15,9 @@
 <ion-content>
   <div class="message_content">
     <div *ngFor="let chat of data.messages">
-      <div class="message_chats">
+      <div class="message_chats" [ngClass]="{'message_reciever': user._id == chat.from}">
         {{ chat.message }}
-        <span class="message_time_stamp">Today</span>
+        <span class="message_time_stamp">{{ chat.time | date: 'short' }}</span>
       </div>
     </div>
   </div>
