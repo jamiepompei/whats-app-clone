@@ -10,7 +10,7 @@
         <div><strong>{{ chat.name }}</strong></div>
         <div><p>{{ getLastMessage(i) }}</p></div>
       </div>
-      <div class="chat_time">Today</div>
+      <div class="chat_time">{{ getLastMessageTime(i) | date: 'shortTime' }}</div>
     </div>
 </div>
 

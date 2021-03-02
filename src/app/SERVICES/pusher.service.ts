@@ -1,4 +1,4 @@
-// declare const Pusher: any;
+
 import { Injectable } from '@angular/core';
 import Pusher from 'pusher-js';
 
