@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class AuthenticationService {
 
+  serverUrl: string = "http://localhost:3000"
+
   constructor(private http: HttpClient) { }
 
   saveUser(user){
