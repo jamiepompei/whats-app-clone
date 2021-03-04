@@ -23,12 +23,6 @@ export class MessagesPage implements OnInit {
         }
       })
       this.user = JSON.parse(this.authService.getUser());
-
-
-    // this.route.queryParams.subscribe(params=>{
-    //   this.data = this.router.getCurrentNavigation().extras.state.chat;
-    //   console.log('data ', this.data);
-    // })
    }
 
   ngOnInit() {
