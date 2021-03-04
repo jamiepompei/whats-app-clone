@@ -8,7 +8,7 @@ import { DatePipe } from '@angular/common';
 })
 export class ApiService {
 
-  serverUrl: string = "http://localhost:3000"
+  serverUrl: string = "https://whatsapp-clone-np.herokuapp.com/"
 
   constructor(private http: HttpClient, private datePipe: DatePipe) { }
 
